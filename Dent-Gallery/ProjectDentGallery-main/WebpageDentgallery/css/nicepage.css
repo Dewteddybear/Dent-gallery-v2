@@ -28513,7 +28513,7 @@ section.u-grey-80:before,
 .u-container-layout.u-container-layout.u-grey-80:before,
 .u-table-alt-grey-80 tr:nth-child(even) {
   color: #ffffff;
-  background-color: #333333;
+  background-color: white;
 }
 .u-button-style.u-grey-80,
 .u-button-style.u-grey-80[class*="u-border-"] {
@@ -38002,8 +38002,7 @@ a.u-link.u-text-hover-grey-90:hover {
         }
         h2:not(.u-subtitle)
         {
-        font-weight: 400;
-        font-size: 2.25rem;
+       
         line-height: 1.1;
         margin-top: 20px;
         margin-bottom: 20px;
@@ -38574,7 +38573,7 @@ a.u-link.u-text-hover-grey-90:hover {
 }
 
 .u-footer .u-text-1 {
-  width: 417px;
+  width: 500px;
   margin: 39px auto 0;
 }
 
