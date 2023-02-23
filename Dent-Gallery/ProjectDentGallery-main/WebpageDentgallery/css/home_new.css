@@ -565,7 +565,7 @@ nav .content ul li.active a {
     line-height: 0.7em;
 }
 
-h2::before {
+/* h3::before {
     border-top: 4px double #337ab7;
     content: "";
     height: 0;
@@ -574,9 +574,9 @@ h2::before {
     position: absolute;
     top: 50%;
     width: 70px;
-}
+} 
 
-h2::after {
+h3::after {
     border-top: 4px double #337ab7;
     content: "";
     height: 0;
@@ -585,7 +585,7 @@ h2::after {
     position: absolute;
     top: 50%;
     width: 70px;
-}
+} */
 
 @keyframes slideInFromBottom {
     0% {
