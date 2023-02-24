@@ -41,7 +41,6 @@ async function getTagsData() {
     arrayTagsData[i] = data[i].tags;
   }
   arrayTagsData = _.flatten(arrayTagsData);
-  console.log(arrayTagsData);
   //Eliminate duplicates by using the removeDuplicate() function.
   sortedData = removeDuplicate(arrayTagsData, 'tags_name');
   console.log(sortedData);
@@ -100,8 +99,12 @@ async function displayPictures(id) {
   var pictureData = "";
 
   arrayViewData.forEach(picture => {
-    pictureData += `<div class="col-md-12 col-lg-4 "><div class="card-pictures ">`
-    pictureData += `<div class="view-pictures "><img class="pic" src="${(picture.images_name)}"></div></div>`
+    var arrayTags = []
+    picture.tags.some(row => {
+      arrayTags = row.tags_name;
+    })
+    pictureData += `<div class="col-md-12 col-lg-4 "><div class="card-pictures" title="${(arrayTags)}">`
+    pictureData += `<div class="view-pictures "><img class="pic" src="${(picture.images_name)}" ></div></div>`
     pictureData += `<div class="modal " id="myModal"><span class="close">&times;</span>`
     pictureData += `<img class="modal-content " id="thisImg"></div></div>`
   })
