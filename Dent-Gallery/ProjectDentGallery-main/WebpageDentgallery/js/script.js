@@ -100,13 +100,14 @@ async function displayPictures(id) {
 
   arrayViewData.forEach(picture => {
     var arrayTags = []
-    picture.tags.some(row => {
-      arrayTags = row.tags_name;
+    picture.tags.forEach(row => {
+        arrayTags[row.tags_name.length] = ' '+row.tags_name;
     })
-    pictureData += `<div class="col-md-12 col-lg-4 "><div class="card-pictures" title="${(arrayTags)}">`
+
+    pictureData += `<div class="col-md-12 col-lg-4 "><div class="card-pictures" title="${(arrayTags.join(''))}">`
     pictureData += `<div class="view-pictures "><img class="pic" src="${(picture.images_name)}" ></div></div>`
     pictureData += `<div class="modal " id="myModal"><span class="close">&times;</span>`
-    pictureData += `<img class="modal-content " id="thisImg"></div></div>`
+    pictureData += `<img class="modal-content " id="thisImg" title="${(arrayTags.join(''))}"></div></div>`
   })
   document.getElementById("card-content").innerHTML= pictureData;
   document.getElementById("paginate").style.display= "none";
